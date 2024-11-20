@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--index.html通常表示首頁(公認的)-->
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index style.css" />
+    <title>熊貓問卷調查</title>
+  </head>
+  <body>
+    <!--這是熊貓問卷調查-->
+    <h1>熊貓問卷調查</h1>
+    <p>感謝您前來填寫問卷</p>
+    <form action="" method="POST">
+      <!-- method=""裡，用GET(預設)打完會出現在網址列，如果是密碼也會出現在上面-->
+      <!-- POST 不會看到資料-->
+      <label for="myName">姓名:</label>
+      <input
+        id="myName"
+        type="text"
+        name="InputName"
+        value="Peter"
+        minlength="2"
+        maxlength="50"
+        placeholder="請輸入真實姓名"
+        required
+      />
+      <!-- for="myName"和id="myName"會連結，在網頁點姓名自己打的字會選起來-->
+      <!-- placeholder，提示的字-->
+
+      <!--selsct and option例子-->
+      <br /><br /><label for="gender">性別:</label>
+      <select name="gender" id="gender" required>
+        <option></option>
+        <option value="male">男性</option>
+        <option value="female">女性</option>
+        <option value="other">其他</option>
+      </select>
+      <span>&#128880;</span>
+      <!--特殊符號，比圖片好設定，運作速度也比圖片快-->
+
+      <!--
+      <br /><br /><input id="male" type="radio" name="gender" value="male" />
+      <label for="male">男性</label>
+
+      <input id="female" type="radio" name="gender" value="female" />
+      <label for="female">女性</label>
+
+      <input id="other" type="radio" name="gender" value="other" required />
+      <label for="other">其他</label>
+      -->
+
+      <br /><br /><label for="myPhone">電話:</label>
+      <input id="myPhone" type="text" name="InputPhone" />
+
+      <br /><br /><label for="email">信箱:</label>
+      <input id="email" type="email" name="InputEmail" required />
+
+      <br /><br /><label for="age">年齡:</label>
+      <input
+        id="age"
+        type="number"
+        name="InputAge"
+        value="18"
+        min="0"
+        max="120"
+        step="1"
+        required
+      />
+      <!--step，設定每次調整數字的單位，預設為1-->
+      <!--required，必填欄位-->
+
+      <!--這是dataList例子-->
+      <br /><br /><label for="area">地區:</label>
+      <input list="areaList" type="text" name="area" id="area" />
+      <datalist id="areaList">
+        <option value="基隆">基隆</option>
+        <option value="新北">新北</option>
+        <option value="臺北">臺北</option>
+        <option value="臺中">臺中</option>
+      </datalist>
+
+      <br /><br /><label for="">帳號:</label>
+      <input id="" type="text" name="" />
+
+      <br /><br /><label for="">密碼:</label>
+      <input id="" type="password" name="" minlength="8" maxlength="12" />
+
+      <!--這是textarea例子-->
+      <br /><br /><label for="suggestion">給網站的建議:</label>
+      <br />
+      <textarea
+        name="suggestion"
+        id="suggestion"
+        cols="30"
+        rows="10"
+        placeholder="歡迎提供建議"
+      ></textarea>
+
+      <br /><br />
+      <input
+        type="checkbox"
+        id="checkbox"
+        name="news"
+        value="newspaper"
+        checked
+      />
+      <label for="checkbox">訂閱熊貓電子報</label>
+
+      <br /><br />0<input
+        type="range"
+        min="0"
+        max="100"
+        step="10"
+        name=""
+        value=""
+      />100
+
+      <br /><br /><input type="file" name="file" />
+
+      <br /><br /><button type="submit" class="submit">提交表單</button>
+      <!-- button要放在form內才能送出表單-->
+    </form>
+  </body>
+</html>

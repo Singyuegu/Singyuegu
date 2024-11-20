@@ -1,0 +1,268 @@
+/* 可以先打出字，打完後選取字按著 ctrl+/ ，就會變成註解 */
+
+*::selection {
+  background-color: rgb(205, 182, 50);
+}
+/*全部用滑鼠選起來的字，背景色都會變顏色*/
+/*universal selector, 所有的標籤*/
+/*Psuedo-elements*/
+/* Psuedo-elements 是box的content設定*/
+
+body {
+  color: rgb(207, 150, 150);
+  /*
+  background-image: url(./images/bamboo.jpg);
+  在背景加圖，用網址
+  background同時能表示 background的img或color
+  background-size: cover;
+  背景圖片貼合網頁
+  background-position: -50% 50%;
+  背景位置，可以自由調整
+  */
+}
+table,
+th,
+td {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+th,
+td {
+  padding: 0.25rem;
+}
+/* opacity, 透明度 */
+tr:hover{
+  background-color: blanchedalmond;
+  color: black;
+  opacity: 0.5;
+}
+h1 {
+  background-color: darkcyan;
+  color: white;
+  /* property name, duration, timing function */
+  transition: all 0.5s ease;
+}
+/* rgb的顏色 */
+/* rgba的a(alpha)，是指透明度，可以輸入0~1之間的數字 */
+/* element selector */
+h1:hover{
+  background-color: rgb(47, 182, 216);
+  color: rgb(255, 206, 101);
+}
+h2 {
+  color: cornflowerblue;
+}
+/* 內設的140種顏色 */
+p {
+  font-size: 1rem;
+  /*預設16px(絕對單位), 1rem(相對單位)*/
+  /*相對單位比較好*/
+  font-family: "Noto Sans TC", sans-serif;
+  /*字體，如果沒有第一個字體，就會用第二個、第三個，通常只會到三個*/
+  text-align: left;
+  /*預設文字靠左*/
+  text-decoration: underline;
+  /*文字裝飾，底線*/
+  text-indent: 32px;
+  /*首行空格*/
+  color: rgb(201, 91, 51);
+}
+div {
+  color: rgb(76, 235, 235);
+  color: #ffa500;
+}
+a {
+  text-decoration: none;
+  color: coral;
+}
+h1.heading {
+  font-size: 2.5rem;
+  padding: 1rem;
+  margin: 1rem;
+  border: 10px solid black;
+  /*粗度，線條樣式，顏色*/
+  width: 13rem;
+}
+/*BOX Model有固定幾項，content, padding, margin, width, height*/
+
+#test {
+  font-family: "Comic Sans MS", cursive, sans-sreif;
+  /*字體，如果沒有第一個字體，就會用第二個、第三個，通常只會到三個*/
+  font-weight: 600;
+  /*字的粗度，預設400*/
+}
+/* id selector */
+
+.blueText {
+  color: blue;
+}
+.largeText {
+  font-size: 2rem;
+}
+/* class selector */
+
+div.link1 a {
+  color: red;
+}
+div.link2 a {
+  font-size: 2rem;
+  /*display: block;*/
+  background-color: cornflowerblue;
+  color: aliceblue;
+  padding: 0.75rem 1rem;
+}
+/*把div底下 link標籤，且為a標籤的，換顏色，預設color: blueviolet*/
+/*descendant selector*/
+/*a這個標籤預設是display:inline，長寬無法更改，block才能*/
+button.submit {
+  padding: 1rem;
+  /*
+  padding: 1px, 2px, 3px, 4px
+  上 右 下 左
+
+  padding: 5px, 6px
+  上下 左右
+
+  padding: 3px;
+  上下左右
+  */
+}
+
+input[type="text"] {
+  color: #ffa500;
+}
+/*把表單自己打出來的文字，換顏色*/
+/*attribute selector*/
+
+textarea:hover {
+  background-color: yellow;
+}
+/*
+  當狀態改變時，換不同顏色，這裡是當滑鼠移到框框，就會換黃色
+  hover, 滑鼠碰到就會觸發
+  active, 滑鼠按著就會觸發
+  focus, 滑鼠點在上面時就會觸發
+*/
+tr:nth-child(2) {
+  color: red;
+}
+.survey:hover {
+  background-color: rgb(25, 25, 170);
+}
+/*改變表格裡的顏色*/
+/*Psuedo-classes*/
+/* Psuedo-elements 是box的content設定*/
+
+/*
+p::before {
+  content: ">>";
+  color: rgb(255, 0, 221);
+}
+*/
+/*在每個段落前面加>>*/
+p::first-letter {
+  font-size: 2.5rem;
+}
+/*首字放大*/
+h1::after {
+  content: "⮛";
+  color: rgb(72, 81, 212);
+}
+/*在每個h1後面加⮛*/
+/*Psuedo-elements*/
+
+/* 
+*{
+  color: green;
+}
+
+
+html tag's attribute:
+1. id
+2. class(類別)
+可以有很多class, 但只能有一個id
+
+h1{
+  color: red;
+}
+element selector
+
+#redText {
+  color: red;
+}
+id selector
+
+.blueText {
+  color: blue;
+}
+class selector
+
+h1.blueText{
+  
+}
+同時是h1，也是class="blueText"，才會使用
+
+h1, h2, p{
+  color: orange;
+}
+grouping selector
+把h1、h2和p都一起換顏色
+
+*/
+
+/*
+CSS Rules
+inline styling > id > class > element selector > inheritance
+
+inline最強#
+
+(1)Cascading Rule(階層)
+(2)Specificity(特定度)
+會依特定程度，把樣式放上去
+id最特別(1,0,0)
+class其次(0,1,0)
+tag最後(0,0,1)
+
+例如 
+h1.redText(0,1,1)
+div.link1 a(0,1,2)
+把滑鼠移到樣式上，就會出現特定度
+(3)Inheritance(繼承)
+  3-1 Inherit parent
+  3-2 自己的
+*/
+
+div.box1 {
+  width: 100px;
+  height: 60px;
+  background-color: black;
+}
+div.box2 {
+  width: 50%;
+  height: 50%;
+  background-color: aqua;
+}
+div.box3 {
+  width: 5vw;
+  height: 10vh;
+  background-color: black;
+}
+/* cursor, 游標形狀 */
+img.pic {
+  width: 550px;
+  height: 350px;
+  cursor: pointer;
+}
+
+div #google {
+  background-color: aquamarine;
+  margin: 150px 30px;
+}
+
+/* list-style-type, 點點的形狀 */
+ul{
+  list-style-type: circle;
+}
+ol{
+  list-style-type: upper-roman;
+}

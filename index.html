@@ -1,0 +1,145 @@
+<!--index.html通常代表首頁(公認的)-->
+<!-- 右下角有Live server -->
+<!-- 按一個驚嘆號，再按tab，就會有一些基礎的東西-->
+<!DOCTYPE html>
+<!-- Document type -->
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- viewport，讓裝置視窗文字內容，都在視窗內 -->
+    <meta name="robots" content="index, follow" />
+    <!-- robots，讓搜尋引擎找的到我們的網站 -->
+    <meta
+      name="description"
+      content="教導大家熊貓基本知識與保護熊貓工作，歡迎捐款"
+    />
+    <!-- description，網站描述，在google搜尋時，會看到蝦面有一排小字 -->
+    <meta name="authur" content="Singyuegu" />
+    <!-- authur，定義作者 -->
+    <base target="_blank" />
+    <!-- 讓網頁導出成新的頁面 -->
+    <link rel="shortcut icon" href="./images/pandaIcon.png" />
+    <!--relationship, 與其他網頁的關係-->
+    <link rel="bookmark" href="./images/pandaIcon.png" />
+    <!--Page Icon goes here-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
+      rel="stylesheet"
+    />
+    <!--  中文的字形連結，要放在CSS上面  -->
+    <link rel="stylesheet" href="./index style.css" />
+    <title>熊貓資訊網</title>
+  </head>
+
+  <body>
+    <p id="test">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. In et dolores,
+      fugiat temporibus deserunt pariatur obcaecati consequuntur itaque tenetur
+      dolorem.
+    </p>
+    <!-- lorem20, 寫20個亂碼(英文字)-->
+    <h1 class="heading" onclick="alert('你剛剛按下h1標籤')">保護貓熊</h1>
+    <!-- 有Aotu Rename Tag的模組，只要改前面的標籤，後面的也會改到-->
+    <!-- heading 1 -->
+    <h1>熊貓保育知識</h1>
+    <p>
+      大貓熊是中國國家一級保護動物，IUCN紅色名錄內列為易危物種。1958年設立的四川臥龍自然保護區的保護內容的重點就是大貓熊，這個保護區由國家林業局直接管轄。
+      但由於當時較落後的保護觀念和生態學知識的相對匱乏，1980年代期間雖然全中國都在高喊「保護大貓熊」，但真正有利於貓熊的做法卻並不多。
+    </p>
+    <!-- paragraph -->
+    <!-- 先按一個p，再按tab，會直接冒出開頭與結尾-->
+    <p>
+      許多人都認為最好的保育辦法就是從野外捉來貓熊進行人工飼養，而飼養條件較差和工作人員缺乏飼養相關的一些科學常識，使許多研究基地成為貓熊永久的牢籠。
+      對於竹子開花給貓熊帶來的負面效果，也通常是通過捕捉貓熊的方式解決，沒有研究它的食性進化和評估竹子死亡對它的實際影響。由於棲息地被破壞、環境污染、與種群隔離等原因，使野外種群的繁衍出現危機。
+      1998年天然林砍伐的全面禁止和禁止個人擁有槍枝的實施，在一定程度上保護了貓熊的生存。1992年以後，向保護區內的移民被禁止，並安排居民陸續遷出，使貓熊的棲息地得到了一定的保證。
+      經過多年的保護工作，有些地方大貓熊的野外種群數量開始上升。
+    </p>
+
+    <h1>近年發展</h1>
+
+    <p>
+      截至2004年，一個為期4年的《全國第三次大貓熊調查報告》統計指出野外大貓熊總數約為1596隻，較1985年的1114隻為多。其中僅約有273隻野生秦嶺大貓熊，僅佔全國大貓熊總數的17％。
+      2016年9月，隨著貓熊數量持續增加，國際自然保護聯盟在《紅色名錄》將其保護狀態從瀕危調整為易危。
+    </p>
+
+    <h1>熊貓圖片</h1>
+    <img class="pic" src="./images/panda.jpg" alt="panda" />
+    <!-- image, source, -->
+    <!-- alternative，如果找不到圖片，或者連結失效，就會顯示這串字-->
+    <!-- 打./可以從本資料夾，找到需要的東西-->
+    <!-- 如果打../，可以找資料夾最上層的東西-->
+    <img class="pic" src="./images/panda2.jpg" alt="panda2" />
+
+    <h2 class="blueText largeText">臺灣熊貓</h2>
+    <ul>
+      <li>2008:團團圓圓到臺灣</li>
+      <li>2013:圓仔出生</li>
+      <li>還沒其他熊貓</li>
+    </ul>
+    <!-- ul, 無順序unordered list -->
+    <ol>
+      <li>未知熊貓</li>
+      <li>未知熊</li>
+      <li>未知貓</li>
+    </ol>
+    <!-- ol, 有順序ordered list -->
+
+    <h2 class="blueText">熊貓表格</h2>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="3">熊貓國家表格</th>
+        </tr>
+        <tr>
+          <th>國家</th>
+          <th>年分</th>
+          <th>熊貓</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th>墨西哥</th>
+          <th>1975</th>
+          <th>迎迎、貝貝</th>
+        </tr>
+        <tr>
+          <th>臺灣</th>
+          <th>2008</th>
+          <th>團團、圓圓</th>
+        </tr>
+        <tr>
+          <th>日本</th>
+          <th>2011</th>
+          <th>比力、仙女</th>
+        </tr>
+      </tbody>
+    </table>
+
+    <br />
+    <div class="box1">
+      <div class="box2"></div>
+    </div>
+    <br />
+    <div class="box3"></div>
+
+    <h1>相關連結</h1>
+    <div class="link1">
+      <!--打div.link1，之後按tab就會有上面那串-->
+      <a href="https://www.google.com" id="google">Google首頁</a>
+      <!-- anchor  hypertext reference -->
+      <a href="https://www.youtube.com">Youtube</a>
+    </div>
+    <!--divide-->
+    <br /><br /><br />
+    <div class="link2">
+      <a target="_self" href="./myForm.html" class="survey">熊貓問卷調查</a>
+      <!--如果要把網頁導在新的頁面，要在head用base設定，也可以個別設定 -->
+    </div>
+  </body>
+</html>
